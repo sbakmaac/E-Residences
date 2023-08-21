@@ -101,6 +101,68 @@ section {
   margin: 0 auto 0 auto;
 }
 
+
+/* popup start */
+
+
+.top-bar-right {
+  position: fixed;
+  right: 0;
+  top: 150px;
+}
+.profile-toggle {
+  position: absolute;
+  width: 200px;
+  height: auto;
+  display: table;
+  border-radius:5px;
+  font-family:'cairo',serif;
+  font-size: 16px;
+  right: -90px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  z-index: 5;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  background: #C8102E;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+}
+#toggle-right {
+  display: none;
+}
+#toggle-right:checked + .page-wrap .profile {
+  right: 0px;
+}
+#toggle-right:checked + .page-wrap .profile-toggle {
+  right: 135px;
+}
+.profile {
+  position: fixed;
+  top: 59px;
+  right: -270px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  height: 230px;
+  width: 220px;
+  background: #F6E5B7;
+  z-index: 2000;
+  border: 1px solid #C8102E;
+  padding: 10px 20px;
+  font-family:'cairo',serif;
+  text-align: center;
+}
+.profile a {
+  display: block;
+  margin-bottom: 0px;
+}
+
+/* popup end */
+
+
 @media (min-width: 1199px) {
   .section-header p {
     max-width: 60%;
@@ -1881,7 +1943,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
   transition-duration: 0.4s;
 }
 
